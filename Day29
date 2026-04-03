@@ -1,0 +1,58 @@
+📅 DSA Training – Day 1
+Topic: Arrays Basics + 2 Important Problems
+
+⏱️ ~45 minutes
+
+1️⃣ Concept: Arrays (in Python = List)
+arr = [10, 20, 30, 40]
+Key Operations
+Access → arr[i]
+Traverse → loop
+Update → arr[i] = value
+Length → len(arr)
+2️⃣ Problem 1: Find Maximum Element 🔥
+Approach:
+Assume first element is max
+Compare with others
+arr = [10, 50, 20, 80, 30]
+
+max_val = arr[0]
+
+for num in arr:
+    if num > max_val:
+        max_val = num
+
+print(max_val)
+3️⃣ Problem 2: Reverse Array (Important)
+Method 1 (Built-in)
+arr = [1, 2, 3, 4]
+arr.reverse()
+print(arr)
+Method 2 (Interview Way 🔥)
+arr = [1, 2, 3, 4]
+
+left = 0
+right = len(arr) - 1
+
+while left < right:
+    arr[left], arr[right] = arr[right], arr[left]
+    left += 1
+    right -= 1
+
+print(arr)
+4️⃣ Interview Insight 🧠
+
+👉 Always prefer:
+
+Logic over built-in functions
+Explain your approach
+📝 Practice Problems (Do Now)
+
+1️⃣ Find minimum element
+2️⃣ Count occurrences of a number
+3️⃣ Reverse array WITHOUT .reverse()
+4️⃣ Find second largest element 🔥
+
+🎯 Daily Target
+Solve at least 3 problems/day
+Focus on logic, not memorization
