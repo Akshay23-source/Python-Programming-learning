@@ -1,0 +1,64 @@
+Topic: Arrays Level 2 (Important Patterns)
+
+⏱️ ~45 minutes
+
+1️⃣ Pattern 1: Second Largest Element 🔥 (VERY COMMON)
+Approach:
+Track largest & second largest
+arr = [10, 50, 20, 80, 30]
+
+first = second = float('-inf')
+
+for num in arr:
+    if num > first:
+        second = first
+        first = num
+    elif num > second and num != first:
+        second = num
+
+print("Second Largest:", second)
+2️⃣ Pattern 2: Check if Array is Sorted
+arr = [1, 2, 3, 4]
+
+is_sorted = True
+
+for i in range(len(arr) - 1):
+    if arr[i] > arr[i + 1]:
+        is_sorted = False
+        break
+
+print(is_sorted)
+3️⃣ Pattern 3: Move Zeros to End 🔥
+
+👉 Important interview question
+
+arr = [0, 1, 0, 3, 12]
+
+pos = 0
+
+for i in range(len(arr)):
+    if arr[i] != 0:
+        arr[pos], arr[i] = arr[i], arr[pos]
+        pos += 1
+
+print(arr)
+4️⃣ Pattern 4: Remove Duplicates (Sorted Array)
+arr = [1, 1, 2, 2, 3]
+
+unique = []
+
+for num in arr:
+    if num not in unique:
+        unique.append(num)
+
+print(unique)
+🧠 Interview Tricks
+Use two pointers (left/right)
+Avoid extra space if possible
+Think in patterns, not questions
+📝 Practice Problems (Must Do)
+
+1️⃣ Find second smallest element
+2️⃣ Check if array is strictly increasing
+3️⃣ Move all negative numbers to one side
+4️⃣ Remove duplicates WITHOUT using extra list 🔥
